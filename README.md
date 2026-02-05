@@ -46,3 +46,7 @@ Helpdesk integration module that connects to the BaseLinker API and fetches orde
    ```bash
    php bin/phpunit
    ```
+
+## Monitoring
+
+Errors and performance are logged via Monolog. **Errors**: the fetch handler logs API failures (message, code) before rethrowing. **Performance**: the BaseLinker client logs each API request at debug level with `method` and `duration_ms`. Logs go to `var/log/dev.log` .
