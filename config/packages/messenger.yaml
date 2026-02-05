@@ -10,8 +10,7 @@ framework:
             sync: 'sync://'
 
         routing:
-            # Route your messages to the transports
-            # 'App\Message\YourMessage': async
+            App\BaseLinker\Message\FetchOrdersMessage: sync
 
 # when@test:
 #    framework:
