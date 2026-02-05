@@ -11,7 +11,7 @@ use Psr\Log\LoggerInterface;
 use Symfony\Component\Messenger\Attribute\AsMessageHandler;
 
 #[AsMessageHandler]
-final class FetchOrdersHandler
+class FetchOrdersHandler
 {
     public function __construct(
         private readonly OrdersService $ordersService,

@@ -12,3 +12,8 @@
 # Personal notes (not for repo)
 NOTES.md
 NOTES2.md
+
+###> phpunit/phpunit ###
+/phpunit.xml
+/.phpunit.cache/
+###< phpunit/phpunit ###

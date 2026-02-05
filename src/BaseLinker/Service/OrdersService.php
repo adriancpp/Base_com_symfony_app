@@ -11,7 +11,7 @@ use App\BaseLinker\Exception\BaseLinkerApiException;
  * Fetches orders from BaseLinker. Thin layer over the client – builds params, returns orders.
  * Each order has order_source (marketplace: allegro, ebay, etc.).
  */
-final class OrdersService
+class OrdersService
 {
     public function __construct(
         private readonly BaseLinkerClient $client
