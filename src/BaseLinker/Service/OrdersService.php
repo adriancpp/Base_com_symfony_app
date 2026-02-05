@@ -45,6 +45,28 @@ final class OrdersService
 
         $response = $this->client->request('getOrders', $params);
 
-        return $response['orders'] ?? [];
+        $orders = $response['orders'] ?? [];
+
+        return $this->normalizeOrdersList($orders);
+    }
+
+    /**
+     * BaseLinker returns orders as object {order_id: {...}} or list [{...}]. Normalize to list.
+     *
+     * @param array<string, mixed> $orders
+     * @return list<array<string, mixed>>
+     */
+    private function normalizeOrdersList(array $orders): array
+    {
+        if (empty($orders)) {
+            return [];
+        }
+
+        $first = array_values($orders)[0] ?? null;
+        if (is_array($first) && isset($first['order_id'])) {
+            return array_values($orders);
+        }
+
+        return $orders;
     }
 }
