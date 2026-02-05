@@ -1,5 +1,7 @@
 # BaseLinker helpdesk integration (Symfony 6)
 
+Helpdesk integration module that connects to the BaseLinker API and fetches orders from one or more marketplaces (e.g. Allegro, eBay). Uses Symfony Messenger for queuing (sync transport); design keeps the API client generic and operations in thin services.
+
 ## How to run the project
 
 1. **Install dependencies**
