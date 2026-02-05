@@ -1,0 +1,7 @@
+# BaseLinker API integration
+# Set BASE_LINKER_TOKEN in .env (from BaseLinker panel: Account & other -> My account -> API)
+parameters:
+    base_linker.api_url: '%env(default:base_linker_default_api_url:BASE_LINKER_API_URL)%'
+    base_linker_default_api_url: 'https://api.baselinker.com/connector.php'
+    base_linker.token: '%env(default:base_linker_token_default:BASE_LINKER_TOKEN)%'
+    base_linker_token_default: ''

@@ -8,3 +8,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+# Personal notes (not for repo)
+NOTES_RECRUITMENT.md
